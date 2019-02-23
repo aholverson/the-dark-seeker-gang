@@ -25,7 +25,7 @@
 <nav>
 	<a href="#" class="logo">The Gang</a>
 	<ul>
-		<li><a href="#">Join</a></li>
+		<li><a href="javascript:()" onclick="showPopup();">Join Us!</a></li>
 		<li><a href="#story">The Story</a></li>
 		<li><a href="#more-info">More Info</a></li>
 	</ul>
@@ -34,7 +34,7 @@
 	<div class="wrapper">
 		<h2>Become a Member of Organization XIII</h2>
 		<p>Come join us and help bring about <span class="highlight">Kingdom Hearts.</span> Only uber strong hearts will do. Members will recieve a cool jacket and power beyond their understanding.</p>
-		<button class="cta">Sign Me Up!</button>
+		<button class="cta" onclick="showPopup();">Join Us!</button>
 	</div>
 </div>
 <div class="sep"></div>
@@ -59,36 +59,45 @@
 </div>
 <div class="sep"></div>
 <img class="gang-img" src="img/gang.png" width="1058" height="621" alt="The Gang">
+
 <footer>
 	<div class="wrapper">
 		Made by <a href="https://www.khwiki.com/Xehanort">Master Xehanort</a>
 	</div>
 </footer>
-<div class="popup">
+
+<div class="popup" id="popup">
 	<div class="blanket"></div>
 	<div class="content">
 		<h2>Fill In Your Details</h2>
 		<form action=""> 
-			<div>
-				<label>First Name</label>
-				<input type="text" placeholder="Sora" value="Sora">
+			<div class="row">
+				<div class="item">
+					<label>Your First Name</label>
+					<input type="text" placeholder="Sora" value="Sora">
+				</div>
+				<div class="item">
+					<label>New X-Name</label>
+					<input type="text" placeholder="Roxas">
+				</div>
 			</div>
-			<div>
-				<label>New X-Name</label>
-				<input type="text" placeholder="Roxas">
-			</div>
-			<div>
-				<label>Clothing Size</label>
-				<input type="text" placeholder="Large">
-			</div>
-			<div>
-				<label>Favorite Weapon</label>
-				<input type="text" placeholder="Keyblade">
+			<div class="row">
+				<div class="item">
+					<label>Jacket Size</label>
+					<input type="text" placeholder="Large">
+				</div>
+				<div class="item">
+					<label>Favorite Weapon</label>
+					<input type="text" placeholder="Keyblade">
+				</div>
 			</div>
 			<button class="cta">Submit!</button>
 		</form>
-		<button class="close">Close</button>
+		<button class="close" onclick="hidePopup();">Close</button>
 	</div>
 </div>
+
+<script src="script.js" type="text/javascript"></script>
+
 </body>
 </html>

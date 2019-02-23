@@ -268,28 +268,130 @@ footer a{
 
 .popup{
 	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 2;
 }
 
+.popup .show{
+	display: block;
+}
+
+.popup .blanket{
+	background-color: rgba(0,0,0,.7);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.popup .content{
+	width: 960px;
+	height: 500px;
+	padding: 30px 40px;
+	box-sizing: border-box;
+	background-color: white;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -250px;
+	margin-left: -480px; 
+}
+
+.popup h2{
+	margin: 10px 0 20px;
+}
+
+.popup .cta{
+	margin-top: 40px;
+}
+
+.popup .close{
+	width:76px;
+	height: 76px;
+	background: red url(img/close.png) no-repeat center center;
+	background-size: 70%;
+	position: absolute; /* moves icon from center to corner*/
+	top: -40px;
+	right: -40px;
+	border-radius: 50%;
+	border:none;
+	outline: none;
+	overflow: hidden; /*hides "close" word floating on image*/
+	text-indent: -999px; /*hides "close" word floating on image*/
+	cursor: pointer;
+}
+
+.popup .row{
+
+}
+
+.popup .row:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.popup .item{
+	float: left;
+	width: 415px;
+	margin-left: 40px;
+	text-align: left;
+}
+
+.popup .item:first-child{
+	margin-left: 0;
+}
+
+.popup .item label{
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.popup .item input[type='text']{
+	display: block;	
+	font-size: 30px;
+	font-weight: bold;
+	border: 4px solid #111;
+	height: 70px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 15px 20px;
+}
 /*
 
-<div class="sep"></div>
-<div class="story" id="story">
-	<ul class="nb-list">
-		<li class="blue">Knowledge</li>
-		<li class="grey">&nbsp;</li>
-		<li class="purple dragging">Darkness</li>
-		<li class="red">X-Names</li>
-		<li class="yellow">X-Blades</li>
-		<li class="navy">Black Coats</li>
-		<li class="cyan">Kingdom Hearts</li>
-		<li class="green">Destiny Islands</li>
-	</ul>
-	<h3>Those Who Know Nothing, Can Understand Nothing<br>
-	Below: Their Story</h3>
-	<p>It began a long time ago with a young man tired of being on his little world left and became a keyblade master.</p>
-	<p>He wanted more. More knowledge. More darkness. Kingdom Hearts held the answers he seeked. Thus, he cast off his body and traveled through time. Organization XIII was created to try to open Kingdom Hearts by clashing 13 vessels of darkness against 7 warriors of light.</p>
-	<p>Eventually, he realized darkness corrupted absolutely. His new goal: use Kingdom Hearts to reset all life and return the world to darkness.</p>
+<div class="popup">
+	<div class="blanket"></div>
+	<div class="content">
+		<h2>Fill In Your Details</h2>
+		<form action=""> 
+			<div>
+				<label>First Name</label>
+				<input type="text" placeholder="Sora" value="Sora">
+			</div>
+			<div>
+				<label>New X-Name</label>
+				<input type="text" placeholder="Roxas">
+			</div>
+			<div>
+				<label>Clothing Size</label>
+				<input type="text" placeholder="Large">
+			</div>
+			<div>
+				<label>Favorite Weapon</label>
+				<input type="text" placeholder="Keyblade">
+			</div>
+			<button class="cta">Submit!</button>
+		</form>
+		<button class="close">Close</button>
+	</div>
 </div>
-<div class="sep"></div>
 
 	*/
